@@ -214,61 +214,69 @@
         </div>
 
         <!-- Top Employees Table -->
-        <div class="card">
+        <div class="card mt-4">
             <div class="card-body">
                 <h5 class="card-title">Top 5 Employees with Most Completed Tasks</h5>
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th>Completed Tasks</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($topEmployees as $employee)
+                @if ($topEmployees->isNotEmpty())
+                    <table class="table table-striped">
+                        <thead>
                             <tr>
-                                <td>{{ $employee->name }}</td>
-                                <td>{{ $employee->email }}</td>
-                                <td>{{ $employee->phone }}</td>
-                                <td>{{ $employee->completed_tasks }}</td>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Completed Tasks</th>
                             </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            @foreach ($topEmployees as $employee)
+                                <tr>
+                                    <td>{{ $employee->name }}</td>
+                                    <td>{{ $employee->email }}</td>
+                                    <td>{{ $employee->phone }}</td>
+                                    <td>{{ $employee->tasks_count }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                @else
+                    <p class="text-center">No employees have completed tasks.</p>
+                @endif
             </div>
         </div>
-    </div>
 
-    <!-- Include Bootstrap Bundle JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Include Bootstrap Bundle JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-        // Bar Chart for Task Status Distribution
-        const ctx = document.getElementById('taskChart').getContext('2d');
-        const taskChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Pending', 'Completed'],
-                datasets: [{
-                    label: 'Tasks',
-                    data: [{{ $pendingTasks }}, {{ $completedTasks }}],
-                    backgroundColor: ['rgba(230, 57, 70, 0.8)', 'rgba(69, 123, 157, 0.8)'],
-                    borderColor: ['rgba(230, 57, 70, 1)', 'rgba(69, 123, 157, 1)'],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    y: {
-                        beginAtZero: true
+        <script>
+            // Bar Chart for Task Status Distribution
+            const ctx = document.getElementById('taskChart').getContext('2d');
+            const taskChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Pending', 'Completed'],
+                    datasets: [{
+                        label: 'Tasks',
+                        data: [{{ $pendingTasks }}, {{ $completedTasks }}],
+                        backgroundColor: ['rgba(230, 57, 70, 0.8)', 'rgba(69, 123, 157, 0.8)'],
+                        borderColor: ['rgba(230, 57, 70, 1)', 'rgba(69, 123, 157, 1)'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
                     }
                 }
-            }
-        });
-    </script>
+            });
+        </script>
+
+</body>
+
+</html>
+
 
 </body>
 
