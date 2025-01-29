@@ -159,7 +159,7 @@ Before setting up the project, ensure you have the following installed on your s
 
 ## URL to Public Repository
 
-# [Project Repository](https://github.com/NamiduHarshana/etms.git)
+[Project Repository](<[repository_url](https://github.com/NamiduHarshana/etms.git)>)
 
 ---
 
