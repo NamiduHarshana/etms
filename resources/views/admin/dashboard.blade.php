@@ -272,14 +272,7 @@
                 }
             });
         </script>
-<<<<<<< HEAD
 
-</body>
-
-</html>
-
-=======
->>>>>>> 595eeb2 (Updated feature X or fixed bug Y)
 
 </body>
 
