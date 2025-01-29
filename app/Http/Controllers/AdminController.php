@@ -29,5 +29,9 @@ class AdminController extends Controller
         return view('admin.dashboard', compact('totalTasks', 'completedTasks', 'pendingTasks', 'topEmployees'));
     }
 }
+<<<<<<< HEAD
  
     
+=======
+ 
+>>>>>>> 595eeb2 (Updated feature X or fixed bug Y)

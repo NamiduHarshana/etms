@@ -145,10 +145,26 @@ Before setting up the project, ensure you have the following installed on your s
 
 ---
 
+## Default Login Credentials
+
+### Admin Account:
+
+-   **Email**: `admin@example.com`
+-   **Password**: `admin123`
+
+### Employee Account:
+
+-   **Email**: `john@example.com`
+-   **Password**: `John123`
+
 ## URL to Public Repository
 
 The project is hosted on GitHub. You can find the source code at:
+<<<<<<< HEAD
 [Project Repository]([repository_url](https://github.com/NamiduHarshana/etms.git))
+=======
+[Project Repository](https://github.com/NamiduHarshana/etms.git)
+>>>>>>> 595eeb2 (Updated feature X or fixed bug Y)
 
 ---
 
