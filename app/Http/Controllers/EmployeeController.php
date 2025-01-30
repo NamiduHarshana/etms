@@ -28,17 +28,17 @@ class EmployeeController extends Controller
             'phone' => 'required|unique:employees,phone',
             'password' => 'required|min:8',
         ]);
-    
+
         Employee::create([
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
-            'password' => Hash::make($request->password), // Hash the password
+            'password' => Hash::make($request->password),
         ]);
-    
+
         return redirect()->route('employees.index')->with('success', 'Employee added successfully.');
     }
-    
+
 
     public function edit(Employee $employee)
     {

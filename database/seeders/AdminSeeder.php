@@ -11,11 +11,11 @@ class AdminSeeder extends Seeder
     public function run(): void
     {
         Admin::updateOrCreate(
-            ['email' => 'admin@example.com'], // Check for existing email
+            ['email' => 'admin@example.com'],
             [
                 'name' => 'Admin User',
                 'password' => Hash::make('admin123'),
-                'email' => 'admin@example.com', // Ensure email is set
+                'email' => 'admin@example.com',
             ]
         );
     }

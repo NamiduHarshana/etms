@@ -12,7 +12,7 @@ return new class extends Migration {
             $table->string('title');
             $table->text('description');
             $table->date('due_date');
-            $table->enum('status', ['pending', 'in_progress', 'completed'])->default('pending'); // Added 'in_progress' state
+            $table->enum('status', ['pending', 'in_progress', 'completed'])->default('pending');
             $table->foreignId('employee_id')->constrained('employees')->onDelete('cascade');
             $table->timestamps();
         });

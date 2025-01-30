@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->string('email')->unique();
             $table->string('phone')->unique();
             $table->string('password');
-            $table->rememberToken(); // Adds support for "remember me" functionality
+            $table->rememberToken(); // "remember me" functionality authanticatin
             $table->timestamps();
         });
     }

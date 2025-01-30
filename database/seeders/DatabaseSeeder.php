@@ -13,16 +13,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Ensure the user is created only if it does not exist
+
         User::updateOrCreate(
-            ['email' => 'test@example.com'], // Check for existing email
+            ['email' => 'test@example.com'],
             [
                 'name' => 'Test User',
-                'password' => Hash::make('password123'), // Add a hashed password
+                'password' => Hash::make('password123'),
             ]
         );
 
-        // Seed Employees and Tasks
+
         $this->call([
             EmployeeSeeder::class,
             TaskSeeder::class,
