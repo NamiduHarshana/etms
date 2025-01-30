@@ -20,7 +20,7 @@
         }
 
         .navbar-brand {
-            color: #E63946;
+            color: #ffffff;
             font-size: 1.5rem;
             font-weight: bold;
         }

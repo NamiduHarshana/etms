@@ -116,7 +116,7 @@
         .navbar-brand {
             font-size: 1.5rem;
             font-weight: bold;
-            color: #E63946;
+            color: #ffffff;
         }
 
         .navbar-brand:hover {
@@ -133,7 +133,7 @@
         }
 
         .navbar .nav-link {
-            color: white !important;
+            color: rgb(229, 226, 226) !important;
         }
 
         .navbar .nav-link:hover {
